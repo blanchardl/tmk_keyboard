@@ -98,53 +98,50 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *
     */
 
-    KEYMAP(  // Layer0: default, leftled:none
-        // left hand
-        GRV, 1,   2,   3,   4,   5,   MUTE,
-        TAB, Q,   W,   F,   P,   G,   LBRC,
-        ESC, A,   R,   S,   T,   D,
-        LSFT,Z,   X,   C,   V,   B,   MINS,
+    KEYMAP(  // Layer0: default
+        GRV ,   1,   2,   3,   4,   5,   MUTE,
+        TAB ,   Q,   W,   F,   P,   G,   LBRC,
+        ESC ,   A,   R,   S,   T,   D,
+        LSFT,   Z,   X,   C,   V,   B,   MINS,
         LCTL,LGUI,LALT,FN21,FN22,
-                                      VOLD,VOLU,
-                                           HOME,
-                                 SPC, DEL, END,
+                                    VOLD,VOLU,
+                                         HOME,
+                                SPC, DEL, END,
         // right hand
-             PSCR,6,   7,   8,   9,   0,   CAPS,
-             RBRC,J,   L,   U,   Y,   SCLN,BSLS,
-                  H,   N,   E,   I,   O,   QUOT,
-             EQL, K,   M,   COMM,DOT, SLSH,RSFT,
-                         DOWN,UP,LEFT,RGHT,RCTL,
+             PSCR,6,   7,   8,   9,    0,CAPS,
+             RBRC,J,   L,   U,   Y, SCLN,BSLS,
+                  H,   N,   E,   I,    O,QUOT,
+              EQL,K,   M, COMM, DOT,SLSH,RSFT,
+                    DOWN,   UP,LEFT,RGHT,RCTL,
         MPLY,MSTP,
         PGDN,
         PGUP, ENT, BSPC
     ),
 
-    KEYMAP(  // Layer1: Workman layout, leftled:all
-        // left hand
+    KEYMAP(  // Layer1
         NO,  F1,  F2,  F3,  F4,  F5,  F11,
-        NO,  NO,  NO,  NO,  NO,  NO,  NO,
-        NO,  NO,  NO   NO,  NO,  NO,
-        NO,  NO,  NO,  NO,  NO,  NO,  NO,
+        NO,  NO,  NO,  NO,  NO,  NO,   NO,
+        NO,  NO,  NO,   NO,  NO,  NO,
+        NO,  NO,  NO,  NO,  NO,  NO,   NO,
         NO,  NO,  NO,  NO,  NO,
                                       NO,  NO,
                                            NO,
                                  TRNS,TRNS,NO,
         // right hand
-             F12,  F6,  F7,  F8,  F9,  F10,  NO,
-             NO,  NO,  NO,  NO,  NO,  NO,  NO,
+             F12, F6,  F7,  F8,  F9, F10,  NO,
+              NO, NO,  NO,  NO,  NO,  NO,  NO,
                   NO,  NO,  NO,  NO,  NO,  NO,
-             NO,  NO,  NO,  NO,  NO,  NO,  NO,
+              NO, NO,  NO,  NO,  NO,  NO,  NO,
                        NO,  NO,  NO,  NO,  NO,
         NO,  NO,
         NO,
         NO,  TRNS,  TRNS
     ),
 
-    KEYMAP(  // Layer2: numpad, leftled:mid/blue
-        // left hand
+    KEYMAP(  // Layer2: numpad
         NO,  NO,  NO,  NO,  NO,  NO,  NO,
         NO,  NO,  NO,  NO,  NO,  NO,  NO,
-        NO,  NO,  NO   NO,  NO,  NO,
+        NO,  NO,  NO,   NO,  NO,  NO,
         NO,  NO,  NO,  NO,  NO,  NO,  NO,
         NO,  NO,  NO,  NO,  NO,
                                       NO,  NO,
@@ -159,7 +156,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         NO,  NO,
         NO,
         NO,  TRNS,  TRNS
-    )
+    ),
 };
 
 /* id for user defined functions & macros */
