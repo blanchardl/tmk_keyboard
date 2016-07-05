@@ -35,7 +35,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |--------+------+------+------+------+-----| NULL  |           | ~L7  |------+------+------+------+------+--------|
     * | NULL  |NULL | NULL | NULL | NULL | NULL |        |           |      | NULL | NULL | NULL | NULL | NULL | NULL |
     * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-    *   |  NULL  | NULL | NULL | NULL | NULL |                                     | NULL | NULL  | NULL  |NULL | NULL |
+    *   |  NULL  | NULL | NULL | FN21 | NULL |                                     | NULL | NULL  | NULL  |NULL | NULL |
     *   `----------------------------------'                                       `----------------------------------'
     *                                        ,-------------.       ,-------------.
     *                                        | NULL  | NULL |       | NULL | NULL  |
@@ -59,7 +59,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |--------+------+------+------+------+---- | NULL  |           | NULL |------+------+------+------+------+--------|
     * | NULL  |NULL | NULL | NULL | NULL | NULL  |       |           |      | / | 1    | 2     | 3    | ENTR | NULL |
     * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
-    *   |  NULL  | NULL | NULL | NULL | NULL |                                     | 0    | 0    | .   | ENTR  | NULL |
+    *   |  NULL  | NULL | NULL | NULL | FN22 |                                     | 0    | 0    | .   | ENTR  | NULL |
     *   `----------------------------------'                                       `----------------------------------'
     *                                        ,-------------.       ,-------------.
     *                                        | NULL  | NULL |       | NULL | NULL  |
