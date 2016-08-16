@@ -165,6 +165,8 @@ enum function_id {
     CUSTOM_KEY,
     L_CTRL_ALT_ENT,
     R_CTRL_ALT_ENT,
+    LSFT_2_CAP,
+    RSFT_2_CAP,
 };
 
 enum macro_id {
@@ -221,8 +223,8 @@ static const uint16_t PROGMEM fn_actions[] = {
     [27] =  ACTION_LAYER_TAP_KEY(9, KC_V),                  // FN27 = momentary Layer9 on V key, to use with application-specific shortcuts
 
     [28] =  ACTION_LAYER_TAP_KEY(4, KC_A),                  // FN28 = momentary Layer4 on A key, to use with unconvenient keys
-    [29] =  ACTION_FUNCTION(LSFT_2_CAP),            // FN29 = Toggle CapsLock if both Shifts hit
-    [30] =  ACTION_FUNCTION(RSFT_2_CAP),            // FN30 = Toggle CapsLock if both Shifts hit
+    [29] =  ACTION_FUNCTION(LSFT_2_CAP),                    // FN29 = Toggle CapsLock if both Shifts hit
+    [30] =  ACTION_FUNCTION(RSFT_2_CAP),                    // FN30 = Toggle CapsLock if both Shifts hit
     [31] =  ACTION_LAYER_TAP_KEY(2, KC_F),                  // FN31 = momentary Layer2 on F key, to use with Numpad keys
 
 
