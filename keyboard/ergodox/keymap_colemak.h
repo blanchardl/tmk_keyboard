@@ -221,8 +221,8 @@ static const uint16_t PROGMEM fn_actions[] = {
     [27] =  ACTION_LAYER_TAP_KEY(9, KC_V),                  // FN27 = momentary Layer9 on V key, to use with application-specific shortcuts
 
     [28] =  ACTION_LAYER_TAP_KEY(4, KC_A),                  // FN28 = momentary Layer4 on A key, to use with unconvenient keys
-    [29] =  ACTION_LAYER_TAP_KEY(3, KC_S),                  // FN29 = momentary Layer3 on S key, to use with F* keys
-    [30] =  ACTION_LAYER_TAP_KEY(8, KC_D),                  // FN30 = momentary Layer8 on D key, to use with mouse and navigation keys
+    [29] =  ACTION_FUNCTION(LSFT_2_CAP),            // FN29 = Toggle CapsLock if both Shifts hit
+    [30] =  ACTION_FUNCTION(RSFT_2_CAP),            // FN30 = Toggle CapsLock if both Shifts hit
     [31] =  ACTION_LAYER_TAP_KEY(2, KC_F),                  // FN31 = momentary Layer2 on F key, to use with Numpad keys
 
 
