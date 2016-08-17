@@ -16,9 +16,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *                                        ,-------------.       ,-------------.
     *                                        | Vol-  | Vol+ |       | Play | Pause|
     *                                 ,------|------|------|       |------+------+------.
-    *                                 |      |      |  Home|       | PgUp |      |      |
+    *                                 |      |      |  Prev|       | PgUp |      |      |
     *                                 | Space|  Del |------|       |------| Enter| BKSpc|
-    *                                 |      |      |  End |       | PGDn |      |      |
+    *                                 |      |      |  Next|       | PGDn |      |      |
     *                                 `--------------------'       `--------------------'
     *
     *
@@ -105,8 +105,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         FN29,   Z,   X,   C,   V,   B,   MINS,
         LCTL,LGUI,LALT,FN21,FN22,
                                     VOLD,VOLU,
-                                         HOME,
-                                SPC, DEL, END,
+                                         MPRV,
+                                SPC, DEL,MNXT,
         // right hand
              PSCR,6,   7,   8,   9,    0,CAPS,
              RBRC,J,   L,   U,   Y, SCLN,BSLS,
@@ -309,13 +309,13 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
             }
         }
     }
-    
+
     // Toggle capslock when pressing both left and right shift keys
     //
     if (id == LSFT_2_CAP || id == RSFT_2_CAP) {
         uint8_t curr_weak_mods = 0;
 
-        // Set weak_mods value for each shift key 
+        // Set weak_mods value for each shift key
         if (id == LSFT_2_CAP) {
             dprintf("->left shift: %u\n", id);
             curr_weak_mods = MOD_BIT(KC_LSHIFT);
@@ -325,7 +325,7 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
         }
 
         if (record->event.pressed) {
-           
+
             // Get the previous weak_mods value
             uint8_t prev_weak_mods = get_weak_mods();
             dprintf("-->prev_weak_mods: %u\n", prev_weak_mods);
@@ -335,7 +335,7 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
             // If not 0, then at least one shift key is held down.
             if (prev_weak_mods != 0) {
 
-                // Toggle capslock if more than one shift key is pressed. 
+                // Toggle capslock if more than one shift key is pressed.
                 dprintf("--->press, toggle capslock\n");
                 add_key(KC_CAPSLOCK);
                 send_keyboard_report();
@@ -350,7 +350,7 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
             }
         } else {
 
-            // Unset the weak_mods value when shift key is released. 
+            // Unset the weak_mods value when shift key is released.
             dprintf("--->release, curr_weak_mods: %u\n", curr_weak_mods);
             del_weak_mods(curr_weak_mods);
             send_keyboard_report();
